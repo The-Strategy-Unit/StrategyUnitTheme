@@ -4,8 +4,7 @@
 \alias{su_theme_cols}
 \title{Strategy Unit Theme Colours}
 \usage{
-su_theme_cols(..., palette = c(NA, "main", "oranges", "slates", "mixed",
-  "oj_coal", "oj_red"))
+su_theme_cols(..., palette = c(NA, su_theme_palettes))
 }
 \arguments{
 \item{...}{individual colours that you wish to get the values of}
