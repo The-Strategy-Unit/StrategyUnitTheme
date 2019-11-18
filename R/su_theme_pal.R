@@ -7,8 +7,6 @@
 #' @param reverse Optional: boolean value to reverse the palette
 #' @param ... arguments to pass to colorRamp
 #'
-#' @importFrom grDevices colorRampPalette
-#'
 #' @return A colorRamp function
 #' @export
 #'
