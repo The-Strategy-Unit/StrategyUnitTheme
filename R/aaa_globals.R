@@ -31,6 +31,7 @@ su_theme_colours <- c(orange         = "#f8bf07",
                       dark_white     = "#7f7f7f")
 
 #' Strategy Unit Theme Palettes Vector
+#'
 #' The palettes that are used in the Strategy Unit Theme. Non-exported (used by
 #' other functions e.g. su_theme_cols)
 su_theme_palettes <- c("main",

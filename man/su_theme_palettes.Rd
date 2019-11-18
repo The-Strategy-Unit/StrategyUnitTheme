@@ -3,15 +3,12 @@
 \docType{data}
 \name{su_theme_palettes}
 \alias{su_theme_palettes}
-\title{Strategy Unit Theme Palettes Vector
-The palettes that are used in the Strategy Unit Theme. Non-exported (used by
-other functions e.g. su_theme_cols)}
+\title{Strategy Unit Theme Palettes Vector}
 \format{An object of class \code{character} of length 6.}
 \usage{
 su_theme_palettes
 }
 \description{
-Strategy Unit Theme Palettes Vector
 The palettes that are used in the Strategy Unit Theme. Non-exported (used by
 other functions e.g. su_theme_cols)
 }

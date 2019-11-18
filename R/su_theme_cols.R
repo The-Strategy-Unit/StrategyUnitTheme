@@ -25,7 +25,14 @@
 #' su_theme_cols("orange", "red", "grey")
 #' # or, select a single palette
 #' su_theme_cols(palette = "slates")
-su_theme_cols <- function(..., palette = c(NA, su_theme_palettes)) {
+su_theme_cols <- function(...,
+                          palette = c(NA,
+                                      "main",
+                                      "oranges",
+                                      "slates",
+                                      "mixed",
+                                      "oj_coal",
+                                      "oj_red")) {
   # take the ... argument's and convert to a unique vector
   dots <- unique(c(...))
   # verify that the palette argument is valid, i.e. it is in the list of allowed
