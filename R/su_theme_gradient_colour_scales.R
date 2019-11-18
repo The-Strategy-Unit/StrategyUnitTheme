@@ -35,6 +35,7 @@ scale_colour_su <- function(palette = su_theme_palettes, discrete = TRUE, revers
 scale_color_su <- scale_colour_su
 
 #' @export
+#' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 #' @rdname su_theme_gradient_colour_scales
 scale_fill_su <- function(palette = su_theme_palettes, discrete = TRUE, reverse = FALSE, ...) {
   palette <- match.arg(su_theme_palettes)
