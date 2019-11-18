@@ -9,7 +9,7 @@
 #'
 #' @importFrom grDevices colorRampPalette
 #'
-#' @return
+#' @return A colorRamp function
 #' @export
 #'
 #' @examples
