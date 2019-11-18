@@ -27,6 +27,16 @@ su_theme_colours <- c(orange         = "#f8bf07",
                       light_white    = "#f2f2f2",
                       dark_white     = "#7f7f7f")
 
+#' Strategy Unit Theme Palettes Vector
+#' The palettes that are used in the Strategy Unit Theme. Non-exported (used by
+#' other functions e.g. su_theme_cols)
+su_theme_palettes <- c("main",
+                       "oranges",
+                       "slates",
+                       "mixed",
+                       "oj_coal",
+                       "oj_red")
+
 #' Strategy Unit Theme Colours
 #'
 #' This function returns the colours that are used in the Strategy Unit theme as
@@ -54,13 +64,7 @@ su_theme_colours <- c(orange         = "#f8bf07",
 #' su_theme_cols("orange", "red", "grey")
 #' # or, select a single palette
 #' su_theme_cols(palette = "slates")
-su_theme_cols <- function(..., palette = c(NA,
-                                           "main",
-                                           "oranges",
-                                           "slates",
-                                           "mixed",
-                                           "oj_coal",
-                                           "oj_red")) {
+su_theme_cols <- function(..., palette = c(NA, su_theme_palettes)) {
   # take the ... argument's and convert to a unique vector
   dots <- unique(c(...))
   # verify that the palette argument is valid, i.e. it is in the list of allowed
