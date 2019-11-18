@@ -51,11 +51,11 @@ su_theme_cols <- function(..., palette = c(NA, su_theme_palettes)) {
   # return the colours that are part of this palette
   colours <- switch(palette,
                     "main" = c("orange","charcoal","slate","blue","red"),
-                    "oranges" = c("light orange","orange","dark orange"),
-                    "slates" = c("light slate","slate","dark slate"),
-                    "mixed" = c("dark red","orange","yellow","light blue","slate"),
-                    "oj_coal" = c("yellow","orange","red","dark red","dark charcoal"),
-                    "oj_red" = c("yellow","orange","red","dark red"))
+                    "oranges" = c("light_orange","orange","dark_orange"),
+                    "slates" = c("light_slate","slate","dark_slate"),
+                    "mixed" = c("dark_red","orange","yellow","light_blue","slate"),
+                    "oj_coal" = c("yellow","orange","red","dark_red","dark_charcoal"),
+                    "oj_red" = c("yellow","orange","red","dark_red"))
 
   # return the colours from the selected palette
   return(su_theme_colours[colours])
