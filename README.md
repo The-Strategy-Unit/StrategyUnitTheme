@@ -7,7 +7,7 @@ This package provides ggplot2 themes and colour palettes for use by The Strategy
 This package can be installed using devtools:
 
 ```{r}
-devtools::install_github("tomjemmett/StrategyUnitTheme")
+devtools::install_github("The-Strategy-Unit/StrategyUnitTheme")
 ```
 
 All of the exported functions start with the prefix "su_theme_", except for the ggplot2 gradient colour scale functions,
