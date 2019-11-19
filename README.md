@@ -1,5 +1,12 @@
 # StrategyUnitTheme
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://api.travis-ci.org/The-Strategy-Unit/StrategyUnitTheme.svg?branch=master)](https://travis-ci.org/The-Strategy-Unit/StrategyUnitTheme)
+[![Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public.](https://www.repostatus.org/badges/latest/wip.svg)](https://www.repostatus.org/#wip)
+<!-- badges: end -->
+
 This package provides ggplot2 themes and colour palettes for use by The Strategy Unit.
 
 ## Install Instructions
