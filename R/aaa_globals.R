@@ -1,10 +1,10 @@
 # global variables are defined in this file. the file has been named such that
 # it will be executed before any other file
 
-#' Strategy Unit Theme Colours Vector
-#'
-#' The colours that are used in the Strategy Unit Theme. Non-exported (used by
-#' other functions e.g. su_theme_cols)
+# Strategy Unit Theme Colours Vector
+#
+# The colours that are used in the Strategy Unit Theme. Non-exported (used by
+# other functions e.g. su_theme_cols)
 su_theme_colours <- c(orange         = "#f8bf07",
                       charcoal       = "#2c2825",
                       slate          = "#686f73",
@@ -30,10 +30,10 @@ su_theme_colours <- c(orange         = "#f8bf07",
                       light_white    = "#f2f2f2",
                       dark_white     = "#7f7f7f")
 
-#' Strategy Unit Theme Palettes Vector
-#'
-#' The palettes that are used in the Strategy Unit Theme. Non-exported (used by
-#' other functions e.g. su_theme_cols)
+# Strategy Unit Theme Palettes Vector
+#
+# The palettes that are used in the Strategy Unit Theme. Non-exported (used by
+# other functions e.g. su_theme_cols)
 su_theme_palettes <- c("main",
                        "oranges",
                        "slates",
