@@ -17,7 +17,10 @@ RoxygenNote: 6.1.1
 Imports:
     ggplot2 (>= 3.2.1)
 Suggests: 
+    knitr (>= 1.25),
     mockery (>= 0.4.2),
+    rmarkdown (>= 1.15),
     roxygen2 (>= 6.1.1),
     testthat (>= 2.1.0),
     usethis (>= 1.5.1)
+VignetteBuilder: knitr

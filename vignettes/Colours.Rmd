@@ -1,0 +1,101 @@
+---
+title: "Colours"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Colours}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 8
+)
+
+library(StrategyUnitTheme)
+library(tidyverse)
+```
+
+The `StrategyUnitTheme` package contains funcions that return the colours used
+in the [Strategy Unit's](https://www.strategyunitwm.nhs.uk/) branding. This
+Vignette will explain how to use these functions to set the colours in plots
+created with [ggplot2](https://cran.r-project.org/web/packages/ggplot2/index.html).
+
+## List available colours
+
+To view all of the possible colours available, you can use the following
+function:
+
+```{r show colours list}
+su_theme_cols()
+```
+
+The `su_theme_cols` function returns a named vectored of hex-encoded RGB values
+of colours.
+
+If you are only interested in specific colours, you can specify them as
+arguments to the function, like so:
+
+```{r show specific colours}
+su_theme_cols("orange", "red", "grey")
+```
+
+Or, you can use one of the available palettes:
+
+```{r show a palette}
+su_theme_cols(palette = "main")
+```
+
+The documentation for `su_theme_cols` lists all of the palettes
+that are available to use.
+
+These colours are shown below.
+
+```{r show the colours, echo=FALSE, fig.height = 6}
+# note, this is not the recommended way to use the colours in a ggplot, this is
+# just to display the available colours
+
+colours <- su_theme_cols()
+
+tibble(name = names(colours) %>%
+         fct_inorder() %>%
+         fct_rev()) %>%
+  ggplot(aes(name, fill = name)) +
+  geom_bar() +
+  scale_fill_manual(values = colours) +
+  coord_flip() +
+  theme_void() +
+  theme(legend.position = "none",
+        axis.text.y = element_text())
+```
+
+## Using the theme with ggplot2
+
+If you want to use the Strategy Unit's colours in your plots, you can use the
+`scale_colour_su` and `scale_fill_su` functions. For example, if you wish to
+use the main palette:
+
+```{r using the main colour palette in a plot}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point() +
+  scale_colour_su()
+```
+
+You can also change specify a different palette, and reverse the order like so:
+
+```{r specifying a reversed palette}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
+  geom_point() +
+  scale_colour_su(palette = "oj_coal", reverse = TRUE)
+```
+
+These functions by default are for discrete data. If you have continuous then
+you need to set the `discrete` argument to `FALSE`.
+
+```{r continous fill}
+ggplot(faithfuld, aes(waiting, eruptions, fill = density)) +
+  geom_tile() +
+  scale_fill_su(discrete = FALSE, palette = "oranges", reverse = TRUE)
+```
