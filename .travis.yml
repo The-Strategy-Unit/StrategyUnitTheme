@@ -2,9 +2,6 @@
 
 language: R
 cache: packages
-branches:
-  only:
-  - master
 
 before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
 deploy:
