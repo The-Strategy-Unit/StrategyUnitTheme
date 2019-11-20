@@ -15,7 +15,10 @@ knitr::opts_chunk$set(
 )
 
 library(StrategyUnitTheme)
-library(tidyverse)
+library(ggplot2)
+library(tibble)
+library(forcats)
+library(dplyr)
 ```
 
 The `StrategyUnitTheme` package contains funcions that return the colours used
