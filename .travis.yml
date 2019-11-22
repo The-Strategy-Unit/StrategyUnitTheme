@@ -6,7 +6,7 @@ cache: packages
 before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
 
 after_success:
-  - Rscript -e 'covr::codecov(type=c("tests", "vignettes", "examples")'
+  - Rscript -e 'covr::codecov(type=c("tests", "vignettes", "examples"))'
 
 deploy:
   provider: script
