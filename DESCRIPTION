@@ -1,7 +1,7 @@
 Package: StrategyUnitTheme
 Type: Package
 Title: Strategy Unit Theme
-Version: 0.1.0.9000
+Version: 0.1.0.9003
 Authors@R: c(
     person("Tom", "Jemmett", , "thomas.jemmett@nhs.net", c("aut", "cre"), comment = c(ORCID="0000-0002-6943-2990")),
     person("Stacey", "Croft", , "stacey.croft@nhs.net", "aut"),
@@ -17,6 +17,7 @@ RoxygenNote: 6.1.1
 Imports:
     ggplot2 (>= 3.2.1)
 Suggests: 
+    covr (>= 3.3.2),
     dplyr (>= 0.8.3),
     forcats (>= 0.4.0),
     knitr (>= 1.25),

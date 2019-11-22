@@ -5,3 +5,6 @@
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
+^codecov\.yml$
+^bumpVersion.R$
+^CONTRIBUTING.md$
