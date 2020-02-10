@@ -4,21 +4,10 @@
 \alias{su_theme}
 \title{Creates the Strategy Unit Theme for ggplot}
 \usage{
-su_theme(
-  set_su_colours = FALSE,
-  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red")
-)
-}
-\arguments{
-\item{set_su_colours}{logical indicating whether to replace the base ggplot
-colours with the Strategy Unit Theme's colours}
-
-\item{palette}{if `set_su_colours` is set to TRUE, then what palette to use
-from the Strategy Unit Theme?}
+su_theme()
 }
 \description{
-Creates a base theme for ggplot objects and optionally sets the default
-ggplot colours to be a Strategy Unit Theme palette. Make sure that you have
-installed the \link[extrafont]{extrafont} package and
+Creates a base theme for ggplot objects. Make sure that you have installed
+the \link[extrafont]{extrafont} package and
 \href{https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html}{set it up}.
 }
