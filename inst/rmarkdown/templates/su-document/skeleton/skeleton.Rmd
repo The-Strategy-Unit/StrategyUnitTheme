@@ -7,12 +7,20 @@ output:
 
 ```{r setup, include = FALSE}
 
-knitr::opts_chunk$set(echo = FALSE)
-
 library(knitr)
 library(tidyverse)
+library(StrategyUnitTheme)
 
-opts_chunk$set(dpi = 300, dev.args = list(type = "cairo"))
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"))
+
+# Set's the base ggplot theme and changes default colours (if the argument
+# set_su_theme_colours is set to TRUE)
+su_theme(set_su_theme_colours = FALSE, palette = "main")
 ```
 
 ## Overview
