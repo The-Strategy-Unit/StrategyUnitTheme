@@ -7,14 +7,26 @@
 \alias{scale_fill_su}
 \title{Strategy Unit Theme Gradient colour Scale}
 \usage{
-scale_colour_su(palette = c("main", "oranges", "slates", "mixed",
-  "oj_coal", "oj_red"), discrete = TRUE, reverse = FALSE, ...)
+scale_colour_su(
+  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red"),
+  discrete = TRUE,
+  reverse = FALSE,
+  ...
+)
 
-scale_color_su(palette = c("main", "oranges", "slates", "mixed",
-  "oj_coal", "oj_red"), discrete = TRUE, reverse = FALSE, ...)
+scale_color_su(
+  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red"),
+  discrete = TRUE,
+  reverse = FALSE,
+  ...
+)
 
-scale_fill_su(palette = c("main", "oranges", "slates", "mixed",
-  "oj_coal", "oj_red"), discrete = TRUE, reverse = FALSE, ...)
+scale_fill_su(
+  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red"),
+  discrete = TRUE,
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{palette}{The name of palette to use}

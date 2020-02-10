@@ -4,8 +4,11 @@
 \alias{su_theme_pal}
 \title{Strategy Unit Theme Palettes}
 \usage{
-su_theme_pal(palette = c("main", "oranges", "slates", "mixed", "oj_coal",
-  "oj_red"), reverse = FALSE, ...)
+su_theme_pal(
+  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red"),
+  reverse = FALSE,
+  ...
+)
 }
 \arguments{
 \item{palette}{The name of palette to use}
