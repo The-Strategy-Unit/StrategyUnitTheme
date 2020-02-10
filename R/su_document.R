@@ -41,8 +41,8 @@ su_document <- function(toc = FALSE,
                         pandoc_args = NULL) {
 
   # get the locations of resource files located within the package
-  su_template <- system.file("rmarkdown/templates/su_document/Strategy_Unit_Template.docx",
-                             package = "mypackage")
+  su_template <- system.file("rmarkdown/templates/su-document/Strategy_Unit_Template.docx",
+                             package = "StrategyUnitTheme")
 
   # call the base word_document function
   rmarkdown::word_document(toc,
