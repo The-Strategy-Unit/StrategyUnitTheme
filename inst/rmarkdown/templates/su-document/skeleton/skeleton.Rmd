@@ -1,13 +1,24 @@
 ---
 title: "Untitled"
-author: [The Strategy Unit][su]
+author: "[The Strategy Unit][su_web]"
 output:
   StrategyUnitTheme::su_document: default
 ---
+
+```{r setup}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+library(knitr)
+library(tidyverse)
+
+opts_chunk$set(dpi = 300, dev.args = list(type = "cairo"))
+```
 
 ## Overview
 
 ## Analysis
 
 [//]: <> (URL's / References --------------------------------------------------)
-[su]: https://www.strategyunitwm.nhs.uk/
+[su_email]: mailto:Strategy.Unit@nhs.net
+[su_web]: https://www.strategyunitwm.nhs.uk/
