@@ -1,16 +1,20 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
 cache: packages
 
-before_cache: Rscript -e 'remotes::install_cran("pkgdown")'
+addons:
+  apt:
+    packages:
+      - libmagick++-dev
 
-after_success:
-  - Rscript -e 'covr::codecov(type=c("tests", "vignettes", "examples"))'
-
-deploy:
-  provider: script
-  script: Rscript -e 'pkgdown::deploy_site_github()'
-  cleanup: false
-  on:
-    branch: master
+matrix:
+  include:
+  - r: devel
+  - r: release
+    after_success: Rscript -e 'covr::codecov(type=c("tests", "vignettes", "examples"))'
+    before_deploy: Rscript -e 'remotes::install_cran("pkgdown")'
+    deploy:
+      provider: script
+      script: Rscript -e 'pkgdown::deploy_site_github()'
+      skip_cleanup: true
+      on:
+        branch: master
