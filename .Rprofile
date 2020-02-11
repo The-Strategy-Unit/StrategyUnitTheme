@@ -52,3 +52,8 @@ local({
 
   invisible(NA)
 })
+
+# source ~/.Rprofile iff it exists
+if (file.exists("~/.Rprofile")) {
+  source("~/.Rprofile")
+}

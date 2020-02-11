@@ -1,0 +1,63 @@
+---
+title: "Presentation"
+author: "**[`r Sys.getenv('MY_NAME')`][email]**<br />`r Sys.getenv('MY_JOBTITLE')`"
+institute: "**[The Strategy Unit][su]**<br />Midlands and Lancashire Commissioning Support Unit"
+output:
+  StrategyUnitTheme::su_presentation: default
+---
+
+```{r setup, include = FALSE}
+# check that the following environment variables are set
+# set these in a file file called .Renviron: e.g.
+# MY_NAME=Joe Bloggs
+# MY_EMAIL=joe.bloggs@nhs.net
+# MY_JOBTITLE=Analyst
+stopifnot(Sys.getenv("MY_NAME") != "")
+stopifnot(Sys.getenv("MY_EMAIL") != "")
+stopifnot(Sys.getenv("MY_JOBTITLE") != "")
+
+library(knitr)
+library(tidyverse)
+library(StrategyUnitTheme)
+
+# set default options
+opts_chunk$set(echo = FALSE,
+               fig.width = 7.252,
+               fig.height = 4,
+               dpi = 300,
+               dev.args = list(type = "cairo"))
+
+# Set's the base ggplot theme to the Strategy Unit Theme
+theme_set(su_theme())
+
+# uncomment the following lines if you want to use the Strategy Unit theme
+# colours by default
+# scale_fill_continuous <- partial(scale_fill_su, discrete = FALSE)
+# scale_fill_discrete <- partial(scale_fill_su, discrete = TRUE)
+# scale_colour_continuous <- partial(scale_colour_su, discrete = FALSE)
+# scale_colour_discrete <- partial(scale_colour_su, discrete = TRUE)
+```
+
+class: inverse
+
+# Slide Title
+
+text on a slide
+
+---
+
+# A slide where bullets appear
+
+* first point
+
+--
+
+* second point
+
+--
+
+* third point
+
+[//]: <> (URL's / References --------------------------------------------------)
+[email]:mailto:`r Sys.getenv("MY_EMAIL")`
+[su]:https://www.strategyunitwm.nhs.uk/
