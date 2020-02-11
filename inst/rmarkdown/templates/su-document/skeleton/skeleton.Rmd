@@ -19,7 +19,8 @@ opts_chunk$set(echo = FALSE,
                dev.args = list(type = "cairo"))
 
 # Set's the base ggplot theme to the Strategy Unit Theme
-su_theme()
+theme_set(su_theme())
+
 # uncomment the following lines if you want to use the Strategy Unit theme
 # colours by default
 # scale_fill_continuous <- partial(scale_fill_su, discrete = FALSE)
