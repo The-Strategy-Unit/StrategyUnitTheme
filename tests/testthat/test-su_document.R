@@ -14,7 +14,8 @@ test_that("calls rmarkdown::word_document", {
 
   expect_called(s, 1)
   expect_args(s, 1,
-    "rmarkdown/templates/su-document/Strategy_Unit_Template.docx",
+    "rmarkdown/templates/su-document",
+    "Strategy_Unit_Template.docx",
     package = "StrategyUnitTheme"
   )
 
