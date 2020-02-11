@@ -46,7 +46,7 @@ su_theme_cols <- function(...,
       dots <- names(su_theme_colours)
     }
     # immediately return the selected colours
-    return (su_theme_colours[dots])
+    return(su_theme_colours[dots])
   }
 
   # if we are selecting a palette then we shouldn't be specifying colours to
@@ -57,12 +57,14 @@ su_theme_cols <- function(...,
 
   # return the colours that are part of this palette
   colours <- switch(palette,
-                    "main" = c("orange","charcoal","slate","blue","red"),
-                    "oranges" = c("light_orange","orange","dark_orange"),
-                    "slates" = c("light_slate","slate","dark_slate"),
-                    "mixed" = c("dark_red","orange","yellow","light_blue","slate"),
-                    "oj_coal" = c("yellow","orange","red","dark_red","dark_charcoal"),
-                    "oj_red" = c("yellow","orange","red","dark_red"))
+                    "main" = c("orange", "charcoal", "slate", "blue", "red"),
+                    "oranges" = c("light_orange", "orange", "dark_orange"),
+                    "slates" = c("light_slate", "slate", "dark_slate"),
+                    "mixed" = c("dark_red", "orange", "yellow", "light_blue",
+                                "slate"),
+                    "oj_coal" = c("yellow", "orange", "red", "dark_red",
+                                  "dark_charcoal"),
+                    "oj_red" = c("yellow", "orange", "red", "dark_red"))
 
   # return the colours from the selected palette
   return(su_theme_colours[colours])

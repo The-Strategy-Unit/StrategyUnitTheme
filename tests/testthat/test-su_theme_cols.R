@@ -54,12 +54,12 @@ test_that("when a palette is passed, only the palettes colours are returned", {
     expect_equal(actual, expected)
   }
 
-  fn("main", c("orange","charcoal","slate","blue","red"))
-  fn("oranges", c("light_orange","orange","dark_orange"))
-  fn("slates", c("light_slate","slate","dark_slate"))
-  fn("mixed", c("dark_red","orange","yellow","light_blue","slate"))
-  fn("oj_coal", c("yellow","orange","red","dark_red","dark_charcoal"))
-  fn("oj_red", c("yellow","orange","red","dark_red"))
+  fn("main", c("orange", "charcoal", "slate", "blue", "red"))
+  fn("oranges", c("light_orange", "orange", "dark_orange"))
+  fn("slates", c("light_slate", "slate", "dark_slate"))
+  fn("mixed", c("dark_red", "orange", "yellow", "light_blue", "slate"))
+  fn("oj_coal", c("yellow", "orange", "red", "dark_red", "dark_charcoal"))
+  fn("oj_red", c("yellow", "orange", "red", "dark_red"))
 })
 
 test_that("an error occurs when an invalid palette is passed", {

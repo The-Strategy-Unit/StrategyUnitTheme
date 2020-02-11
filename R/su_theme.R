@@ -1,8 +1,7 @@
 #' Creates the Strategy Unit Theme for ggplot
 #'
 #' Creates a base theme for ggplot objects. By default this uses a font that
-#' requires the \link[extrafont]{extrafont} package installed and
-#' \href{https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html}{set up}.
+#' requires the \link[extrafont]{extrafont} package to be installed.
 #'
 #' @param base_family The font to use in this theme
 #'

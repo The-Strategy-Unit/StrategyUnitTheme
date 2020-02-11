@@ -11,6 +11,5 @@ su_theme(base_family = "Segoe UI")
 }
 \description{
 Creates a base theme for ggplot objects. By default this uses a font that
-requires the \link[extrafont]{extrafont} package installed and
-\href{https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html}{set up}.
+requires the \link[extrafont]{extrafont} package to be installed.
 }

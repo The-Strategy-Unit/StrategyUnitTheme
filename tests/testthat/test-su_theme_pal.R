@@ -17,7 +17,8 @@ test_that("it returns expected colours", {
 })
 
 test_that("it returns expected colours when reversed", {
-  expected <- c("#7C5F03", "#AD8504", "#DFAB06", "#F9C92E", "#FBDD7D", "#FDF2CD")
+  expected <- c("#7C5F03", "#AD8504", "#DFAB06", "#F9C92E", "#FBDD7D",
+                "#FDF2CD")
   actual <- su_theme_pal(palette = "oranges", rev = TRUE)(6)
   expect_equal(actual, expected)
 })
