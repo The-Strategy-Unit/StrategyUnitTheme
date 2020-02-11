@@ -19,12 +19,14 @@ NULL
 #' @export
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
 #' @rdname su_theme_gradient_colour_scales
-scale_colour_su <- function(palette = c("main",
-                                        "oranges",
-                                        "slates",
-                                        "mixed",
-                                        "oj_coal",
-                                        "oj_red"),
+scale_colour_su <- function(palette = c(
+                              "main",
+                              "oranges",
+                              "slates",
+                              "mixed",
+                              "oj_coal",
+                              "oj_red"
+                            ),
                             discrete = TRUE,
                             reverse = FALSE, ...) {
   palette <- match.arg(palette)
@@ -44,12 +46,14 @@ scale_color_su <- scale_colour_su
 #' @export
 #' @importFrom ggplot2 discrete_scale scale_fill_gradientn
 #' @rdname su_theme_gradient_colour_scales
-scale_fill_su <- function(palette = c("main",
-                                      "oranges",
-                                      "slates",
-                                      "mixed",
-                                      "oj_coal",
-                                      "oj_red"),
+scale_fill_su <- function(palette = c(
+                            "main",
+                            "oranges",
+                            "slates",
+                            "mixed",
+                            "oj_coal",
+                            "oj_red"
+                          ),
                           discrete = TRUE,
                           reverse = FALSE, ...) {
   palette <- match.arg(palette)

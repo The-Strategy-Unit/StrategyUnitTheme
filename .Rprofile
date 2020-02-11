@@ -14,7 +14,6 @@ local({
   # If the previous commit is "Increment version number" then the function will
   # abort.
   .__su_theme_dev__.$bumpVersion <- function(which = NULL) {
-
     commitMessage <- "Increment version number"
 
     # if the previous commit was an Increment, then stop

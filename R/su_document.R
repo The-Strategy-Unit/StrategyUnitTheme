@@ -36,20 +36,22 @@ su_document <- function(toc = FALSE,
 
   # get the locations of resource files located within the package
   su_template <- system.file("rmarkdown/templates/su-document",
-                             "Strategy_Unit_Template.docx",
-                             package = "StrategyUnitTheme")
+    "Strategy_Unit_Template.docx",
+    package = "StrategyUnitTheme"
+  )
 
   # call the base word_document function
   rmarkdown::word_document(toc,
-                           toc_depth,
-                           fig_width,
-                           fig_height,
-                           fig_caption,
-                           df_print,
-                           smart,
-                           highlight,
-                           reference_docx = su_template,
-                           keep_md,
-                           md_extensions,
-                           pandoc_args)
+    toc_depth,
+    fig_width,
+    fig_height,
+    fig_caption,
+    df_print,
+    smart,
+    highlight,
+    reference_docx = su_template,
+    keep_md,
+    md_extensions,
+    pandoc_args
+  )
 }

@@ -16,12 +16,14 @@
 #' su_theme_pal("oranges")
 #' # a reverse palette
 #' su_theme_pal("slates", TRUE)
-su_theme_pal <- function(palette = c("main",
-                                     "oranges",
-                                     "slates",
-                                     "mixed",
-                                     "oj_coal",
-                                     "oj_red"),
+su_theme_pal <- function(palette = c(
+                           "main",
+                           "oranges",
+                           "slates",
+                           "mixed",
+                           "oj_coal",
+                           "oj_red"
+                         ),
                          reverse = FALSE,
                          ...) {
   palette <- match.arg(palette)

@@ -26,13 +26,15 @@
 #' # or, select a single palette
 #' su_theme_cols(palette = "slates")
 su_theme_cols <- function(...,
-                          palette = c(NA,
-                                      "main",
-                                      "oranges",
-                                      "slates",
-                                      "mixed",
-                                      "oj_coal",
-                                      "oj_red")) {
+                          palette = c(
+                            NA,
+                            "main",
+                            "oranges",
+                            "slates",
+                            "mixed",
+                            "oj_coal",
+                            "oj_red"
+                          )) {
   # take the ... argument's and convert to a unique vector
   dots <- unique(c(...))
   # verify that the palette argument is valid, i.e. it is in the list of allowed
@@ -57,14 +59,19 @@ su_theme_cols <- function(...,
 
   # return the colours that are part of this palette
   colours <- switch(palette,
-                    "main" = c("orange", "charcoal", "slate", "blue", "red"),
-                    "oranges" = c("light_orange", "orange", "dark_orange"),
-                    "slates" = c("light_slate", "slate", "dark_slate"),
-                    "mixed" = c("dark_red", "orange", "yellow", "light_blue",
-                                "slate"),
-                    "oj_coal" = c("yellow", "orange", "red", "dark_red",
-                                  "dark_charcoal"),
-                    "oj_red" = c("yellow", "orange", "red", "dark_red"))
+    "main" = c("orange", "charcoal", "slate", "blue", "red"),
+    "oranges" = c("light_orange", "orange", "dark_orange"),
+    "slates" = c("light_slate", "slate", "dark_slate"),
+    "mixed" = c(
+      "dark_red", "orange", "yellow", "light_blue",
+      "slate"
+    ),
+    "oj_coal" = c(
+      "yellow", "orange", "red", "dark_red",
+      "dark_charcoal"
+    ),
+    "oj_red" = c("yellow", "orange", "red", "dark_red")
+  )
 
   # return the colours from the selected palette
   return(su_theme_colours[colours])
