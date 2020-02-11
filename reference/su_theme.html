@@ -36,9 +36,9 @@
 
 
 <meta property="og:title" content="Creates the Strategy Unit Theme for ggplot — su_theme" />
-<meta property="og:description" content="Creates a base theme for ggplot objects. Make sure that you have installed
-the extrafont package and
-set it up." />
+<meta property="og:description" content="Creates a base theme for ggplot objects. By default this uses a font that
+requires the extrafont package installed and
+set up." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -71,7 +71,7 @@ set it up." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">StrategyUnitTheme</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.2</span>
       </span>
     </div>
 
@@ -125,19 +125,28 @@ set it up." />
     </div>
 
     <div class="ref-description">
-    <p>Creates a base theme for ggplot objects. Make sure that you have installed
-the <a href='https://rdrr.io/pkg/extrafont/man/extrafont.html'>extrafont</a> package and
-<a href='https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html'>set it up</a>.</p>
+    <p>Creates a base theme for ggplot objects. By default this uses a font that
+requires the <a href='https://rdrr.io/pkg/extrafont/man/extrafont.html'>extrafont</a> package installed and
+<a href='https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html'>set up</a>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>su_theme</span>()</pre>
+    <pre class="usage"><span class='fu'>su_theme</span>(<span class='kw'>base_family</span> <span class='kw'>=</span> <span class='st'>"Segoe UI"</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>base_family</th>
+      <td><p>The font to use in this theme</p></td>
+    </tr>
+    </table>
 
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
     </ul>
 
   </div>
