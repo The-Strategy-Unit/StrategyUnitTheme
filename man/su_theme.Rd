@@ -13,3 +13,12 @@ su_theme(base_family = "Segoe UI")
 Creates a base theme for ggplot objects. By default this uses a font that
 requires the \link[extrafont]{extrafont} package to be installed.
 }
+\examples{
+\dontrun{
+library(ggplot2)
+library(StrategyUnitTheme)
+ggplot(iris, aes(Sepal.Width, Sepal.Length, colour = Species)) +
+  geom_point() +
+  su_theme()
+}
+}

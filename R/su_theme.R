@@ -9,10 +9,14 @@
 #'
 #' @import ggplot2
 #'
-#' @example
+#' @examples
+#' \dontrun{
+#' library(ggplot2)
+#' library(StrategyUnitTheme)
 #' ggplot(iris, aes(Sepal.Width, Sepal.Length, colour = Species)) +
 #'   geom_point() +
 #'   su_theme()
+#' }
 su_theme <- function(base_family = "Segoe UI") {
   theme_classic(base_family = base_family) +
     theme(
