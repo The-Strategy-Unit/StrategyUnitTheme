@@ -14,9 +14,9 @@ test_that("calls xaringan::moon_reader", {
 
   expect_called(s, 1)
   expect_args(s, 1,
-              "rmarkdown/templates/su-presentation",
-              "su_xaringan.css",
-              package = "StrategyUnitTheme"
+    "rmarkdown/templates/su-presentation",
+    "su_xaringan.css",
+    package = "StrategyUnitTheme"
   )
 
   expect_called(m, 1)
