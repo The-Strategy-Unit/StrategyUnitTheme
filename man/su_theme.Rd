@@ -4,10 +4,13 @@
 \alias{su_theme}
 \title{Creates the Strategy Unit Theme for ggplot}
 \usage{
-su_theme()
+su_theme(base_family = "Segoe UI")
+}
+\arguments{
+\item{base_family}{The font to use in this theme}
 }
 \description{
-Creates a base theme for ggplot objects. Make sure that you have installed
-the \link[extrafont]{extrafont} package and
-\href{https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html}{set it up}.
+Creates a base theme for ggplot objects. By default this uses a font that
+requires the \link[extrafont]{extrafont} package installed and
+\href{https://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html}{set up}.
 }
