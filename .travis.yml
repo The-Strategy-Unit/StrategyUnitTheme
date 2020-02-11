@@ -1,11 +1,6 @@
 language: R
 cache: packages
 
-addons:
-  apt:
-    packages:
-      - libmagick++-dev
-
 matrix:
   include:
   - r: devel
