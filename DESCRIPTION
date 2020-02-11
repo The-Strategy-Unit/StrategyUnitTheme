@@ -1,7 +1,7 @@
 Package: StrategyUnitTheme
 Type: Package
 Title: Strategy Unit Theme
-Version: 0.1.1.9000
+Version: 0.1.2
 Authors@R: c(
     person("Tom", "Jemmett", , "thomas.jemmett@nhs.net", c("aut", "cre"), comment = c(ORCID="0000-0002-6943-2990")),
     person("Stacey", "Croft", , "stacey.croft@nhs.net", "aut"),
