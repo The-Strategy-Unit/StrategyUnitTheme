@@ -31,5 +31,7 @@ The following functions are available in the package currently
 | `r su_theme_pal`  | Creates a colorRamp palette based on colours in the theme               |
 | `r su_colour_su`  | Creates a colour scale based on an SU palette for use in ggplot2 charts |
 | `r su_fill_su`    | Creates a fill scale based on an SU palette for use in ggplot2 charts   |
+| `r su_theme`      | Returns a ggplot2 theme                                                 |
+| `r su_document`   | For use in RMarkdown documents to use a branded Word Document template  |
 
 For more complete details, view the help files in R for each of these functions
