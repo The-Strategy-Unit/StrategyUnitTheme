@@ -2,7 +2,7 @@
 % Please edit documentation in R/su_presentation.R
 \name{su_presentation}
 \alias{su_presentation}
-\title{Convert to an Strategy Unit Word presentation}
+\title{Convert to an Strategy Unit xaringan presentation}
 \usage{
 su_presentation(...)
 }

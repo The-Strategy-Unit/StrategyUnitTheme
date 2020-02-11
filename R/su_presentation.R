@@ -1,4 +1,4 @@
-#' Convert to an Strategy Unit Word presentation
+#' Convert to an Strategy Unit xaringan presentation
 #'
 #' Format for converting from R Markdown to a Strategy Unit branded xaringan
 #' presentation.
