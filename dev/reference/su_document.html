@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Strategy Unit Theme Colours — su_theme_cols • StrategyUnitTheme</title>
+<title>Convert to an Strategy Unit Word document — su_document • StrategyUnitTheme</title>
 
 
 <!-- jquery -->
@@ -35,9 +35,8 @@
 
 
 
-<meta property="og:title" content="Strategy Unit Theme Colours — su_theme_cols" />
-<meta property="og:description" content="This function returns the colours that are used in the Strategy Unit theme as
-a named vector of RGB values in hexadecimal form." />
+<meta property="og:title" content="Convert to an Strategy Unit Word document — su_document" />
+<meta property="og:description" content="Format for converting from R Markdown to a Strategy Unit branded MS Word document." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -118,62 +117,116 @@ a named vector of RGB values in hexadecimal form." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Strategy Unit Theme Colours</h1>
+    <h1>Convert to an Strategy Unit Word document</h1>
     
-    <div class="hidden name"><code>su_theme_cols.Rd</code></div>
+    <div class="hidden name"><code>su_document.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function returns the colours that are used in the Strategy Unit theme as
-a named vector of RGB values in hexadecimal form.</p>
+    <p>Format for converting from R Markdown to a Strategy Unit branded MS Word document.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>su_theme_cols</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>palette</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>NA</span>, <span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>, <span class='st'>"oj_red"</span>)
+    <pre class="usage"><span class='fu'>su_document</span>(
+  <span class='kw'>toc</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>toc_depth</span> <span class='kw'>=</span> <span class='fl'>3</span>,
+  <span class='kw'>fig_width</span> <span class='kw'>=</span> <span class='fl'>5</span>,
+  <span class='kw'>fig_height</span> <span class='kw'>=</span> <span class='fl'>4</span>,
+  <span class='kw'>fig_caption</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>df_print</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
+  <span class='kw'>smart</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>,
+  <span class='kw'>highlight</span> <span class='kw'>=</span> <span class='st'>"default"</span>,
+  <span class='kw'>keep_md</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='kw'>md_extensions</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>pandoc_args</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
 )</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>individual colours that you wish to get the values of</p></td>
+      <th>toc</th>
+      <td><p><code>TRUE</code> to include a table of contents in the output</p></td>
     </tr>
     <tr>
-      <th>palette</th>
-      <td><p>a name of a palette to select the colours of</p></td>
+      <th>toc_depth</th>
+      <td><p>Depth of headers to include in table of contents</p></td>
+    </tr>
+    <tr>
+      <th>fig_width</th>
+      <td><p>Default width (in inches) for figures</p></td>
+    </tr>
+    <tr>
+      <th>fig_height</th>
+      <td><p>Default height (in inches) for figures</p></td>
+    </tr>
+    <tr>
+      <th>fig_caption</th>
+      <td><p><code>TRUE</code> to render figures with captions</p></td>
+    </tr>
+    <tr>
+      <th>df_print</th>
+      <td><p>Method to be used for printing data frames. Valid values
+include "default", "kable", "tibble", and "paged". The "default" method
+uses a corresponding S3 method of <code>print</code>, typically
+<code>print.data.frame</code>. The "kable" method uses the
+<code><a href='https://rdrr.io/pkg/knitr/man/kable.html'>knitr::kable</a></code> function. The "tibble" method uses
+the <span class="pkg">tibble</span> package to print a summary of the data frame. The "paged"
+method creates a paginated HTML table (note that this method is only valid
+for formats that produce HTML). In addition to the named methods you can
+also pass an arbitrary function to be used for printing data frames. You
+can disable the <code>df_print</code> behavior entirely by setting the option
+<code>rmarkdown.df_print</code> to <code>FALSE</code>.</p></td>
+    </tr>
+    <tr>
+      <th>smart</th>
+      <td><p>Produce typographically correct output, converting straight
+quotes to curly quotes, <code>---</code> to em-dashes, <code>--</code> to en-dashes, and
+<code>...</code> to ellipses.</p></td>
+    </tr>
+    <tr>
+      <th>highlight</th>
+      <td><p>Syntax highlighting style. Supported styles include
+"default", "tango", "pygments", "kate", "monochrome", "espresso",
+"zenburn", and "haddock". Pass <code>NULL</code> to prevent syntax highlighting.</p></td>
+    </tr>
+    <tr>
+      <th>keep_md</th>
+      <td><p>Keep the markdown file generated by knitting.</p></td>
+    </tr>
+    <tr>
+      <th>md_extensions</th>
+      <td><p>Markdown extensions to be added or removed from the
+default definition or R Markdown. See the <code><a href='https://rdrr.io/pkg/rmarkdown/man/rmarkdown_format.html'>rmarkdown_format</a></code> for
+additional details.</p></td>
+    </tr>
+    <tr>
+      <th>pandoc_args</th>
+      <td><p>Additional command line options to pass to pandoc</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a named vector of RGB colours in hexadecimal form</p>
+    <p>R Markdown output format to pass to <code><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>render</a></code></p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>If no arguments are passed to the function, then all of the colours are
-returned. If only specific colours are required, then the names of the
-colours that are required can be passed as strings to the function, and only
-those colours will be returned.</p>
-<p>If a "pallete" is selected then no arguments should be passed to ...</p>
-<p>Only one palete can be selected at a time.</p>
+    <p>See the <a href='https://rmarkdown.rstudio.com/word_document_format.html'>online
+documentation</a> for additional details on using the <code>word_document</code> format.</p>
+<p>R Markdown documents can have optional metadata that is used to generate a
+document header that includes the title, author, and date. For more details
+see the documentation on R Markdown <a href='https://rdrr.io/pkg/rmarkdown/man/rmd_metadata.html'>metadata</a>.</p>
+<p>R Markdown documents also support citations. You can find more information on
+the markdown syntax for citations in the
+<a href='https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html'>Bibliographies
+and Citations</a> article in the online documentation.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># show all of the colours</span>
-<span class='fu'>su_theme_cols</span>()</div><div class='output co'>#&gt;         orange       charcoal          slate           blue            red 
-#&gt;      "#f8bf07"      "#2c2825"      "#686f73"      "#581dc1"      "#ec6555" 
-#&gt;         yellow           grey          white   light_orange    dark_orange 
-#&gt;      "#fce59b"      "#a3a8ac"      "#ffffff"      "#fdf2cd"      "#7c5f03" 
-#&gt; light_charcoal  dark_charcoal    light_slate     dark_slate     light_blue 
-#&gt;      "#ebe9e7"      "#000000"      "#e0e2e3"      "#333739"      "#dde5f2" 
-#&gt;      dark_blue      light_red       dark_red   light_yellow    dark_yellow 
-#&gt;      "#263d66"      "#fbe0dc"      "#901d10"      "#fef9eb"      "#c59805" 
-#&gt;     light_grey      dark_grey    light_white     dark_white 
-#&gt;      "#ecedee"      "#4f5458"      "#f2f2f2"      "#7f7f7f" </div><div class='input'><span class='co'># or, just show some colours</span>
-<span class='fu'>su_theme_cols</span>(<span class='st'>"orange"</span>, <span class='st'>"red"</span>, <span class='st'>"grey"</span>)</div><div class='output co'>#&gt;    orange       red      grey 
-#&gt; "#f8bf07" "#ec6555" "#a3a8ac" </div><div class='input'><span class='co'># or, select a single palette</span>
-<span class='fu'>su_theme_cols</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"slates"</span>)</div><div class='output co'>#&gt; light_slate       slate  dark_slate 
-#&gt;   "#e0e2e3"   "#686f73"   "#333739" </div></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>rmarkdown</span>)
+
+<span class='co'># simple invocation</span>
+<span class='fu'><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>render</a></span>(<span class='st'>"input.Rmd"</span>, <span class='fu'>su_document</span>())
+}</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

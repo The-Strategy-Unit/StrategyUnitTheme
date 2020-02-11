@@ -70,7 +70,7 @@ Strategy Unit palettes" />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">StrategyUnitTheme</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.0.9000</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.1.9000</span>
       </span>
     </div>
 
@@ -128,8 +128,11 @@ Strategy Unit palettes" />
 Strategy Unit palettes</p>
     </div>
 
-    <pre class="usage"><span class='fu'>su_theme_pal</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>,
-  <span class='st'>"oj_red"</span>), <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>su_theme_pal</span>(
+  <span class='kw'>palette</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>, <span class='st'>"oj_red"</span>),
+  <span class='kw'>reverse</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
+  <span class='no'>...</span>
+)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -160,8 +163,8 @@ Strategy Unit palettes</p>
 #&gt;         rgb(x[, 1L], x[, 2L], x[, 3L], x[, 4L], maxColorValue = 255)
 #&gt;     else rgb(x[, 1L], x[, 2L], x[, 3L], maxColorValue = 255)
 #&gt; }
-#&gt; &lt;bytecode: 0x2ec73d0&gt;
-#&gt; &lt;environment: 0x2ec1470&gt;</div><div class='input'><span class='co'># or, specify a paltte</span>
+#&gt; &lt;bytecode: 0x6055d28&gt;
+#&gt; &lt;environment: 0x60473e0&gt;</div><div class='input'><span class='co'># or, specify a paltte</span>
 <span class='fu'>su_theme_pal</span>(<span class='st'>"oranges"</span>)</div><div class='output co'>#&gt; function (n) 
 #&gt; {
 #&gt;     x &lt;- ramp(seq.int(0, 1, length.out = n))
@@ -169,8 +172,8 @@ Strategy Unit palettes</p>
 #&gt;         rgb(x[, 1L], x[, 2L], x[, 3L], x[, 4L], maxColorValue = 255)
 #&gt;     else rgb(x[, 1L], x[, 2L], x[, 3L], maxColorValue = 255)
 #&gt; }
-#&gt; &lt;bytecode: 0x2ec73d0&gt;
-#&gt; &lt;environment: 0x2d17e28&gt;</div><div class='input'><span class='co'># a reverse palette</span>
+#&gt; &lt;bytecode: 0x6055d28&gt;
+#&gt; &lt;environment: 0x611a8f0&gt;</div><div class='input'><span class='co'># a reverse palette</span>
 <span class='fu'>su_theme_pal</span>(<span class='st'>"slates"</span>, <span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; function (n) 
 #&gt; {
 #&gt;     x &lt;- ramp(seq.int(0, 1, length.out = n))
@@ -178,8 +181,8 @@ Strategy Unit palettes</p>
 #&gt;         rgb(x[, 1L], x[, 2L], x[, 3L], x[, 4L], maxColorValue = 255)
 #&gt;     else rgb(x[, 1L], x[, 2L], x[, 3L], maxColorValue = 255)
 #&gt; }
-#&gt; &lt;bytecode: 0x2ec73d0&gt;
-#&gt; &lt;environment: 0x2a4dd10&gt;</div></pre>
+#&gt; &lt;bytecode: 0x6055d28&gt;
+#&gt; &lt;environment: 0x61b95a8&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -195,7 +198,7 @@ Strategy Unit palettes</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Tom Jemmett, Stacey Croft.</p>
+  <p>Developed by <a href='https://github.com/tomjemmett'>Tom Jemmett</a>, Stacey Croft.</p>
 </div>
 
 <div class="pkgdown">
