@@ -29,10 +29,10 @@ su_presentation <- function(...) {
   xaringan::moon_reader(
     css = c("default", css),
     self_contained = TRUE,
-    ratio = "16:9",
-    highlightLines = TRUE,
-    countIncrementalSlides = FALSE,
     nature = list(
+      ratio = "16:9",
+      highlightLines = TRUE,
+      countIncrementalSlides = FALSE,
       highlightStyle = "github"
     ),
     ...
