@@ -13,25 +13,27 @@ library(StrategyUnitTheme)
 
 # set default options
 opts_chunk$set(echo = FALSE,
-               fig.width = 7.252,
-               fig.height = 4,
                dpi = 300,
                dev.args = list(type = "cairo"))
 
-# Set's the base ggplot theme to the Strategy Unit Theme
-theme_set(su_theme())
+# if you want to use the Strategy Unit Theme colours change the variable below
+# to true
+use_su_theme_colours <- FALSE
 
-# uncomment the following lines if you want to use the Strategy Unit theme
-# colours by default
-# scale_fill_continuous <- partial(scale_fill_su, discrete = FALSE)
-# scale_fill_discrete <- partial(scale_fill_su, discrete = TRUE)
-# scale_colour_continuous <- partial(scale_colour_su, discrete = FALSE)
-# scale_colour_discrete <- partial(scale_colour_su, discrete = TRUE)
+if (use_su_theme_colours) {
+  scale_fill_continuous <- partial(scale_fill_su, discrete = FALSE)
+  scale_fill_discrete <- partial(scale_fill_su, discrete = TRUE)
+  scale_colour_continuous <- partial(scale_colour_su, discrete = FALSE)
+  scale_colour_discrete <- partial(scale_colour_su, discrete = TRUE)
+
+  scale_color_continuous <- scale_colour_continuous
+  scale_color_discrete <- scale_colour_discrete
+}
 ```
 
-## Overview
+# Overview
 
-## Analysis
+# Analysis
 
 [//]: <> (URL's / References --------------------------------------------------)
 [su_email]: mailto:Strategy.Unit@nhs.net

@@ -6,11 +6,9 @@
 \usage{
 su_document(
   toc = FALSE,
-  toc_depth = 3,
-  fig_width = 5,
-  fig_height = 4,
+  toc_depth = 1,
   fig_caption = TRUE,
-  df_print = "default",
+  df_print = "kable",
   smart = TRUE,
   highlight = "default",
   keep_md = FALSE,
@@ -22,10 +20,6 @@ su_document(
 \item{toc}{\code{TRUE} to include a table of contents in the output}
 
 \item{toc_depth}{Depth of headers to include in table of contents}
-
-\item{fig_width}{Default width (in inches) for figures}
-
-\item{fig_height}{Default height (in inches) for figures}
 
 \item{fig_caption}{\code{TRUE} to render figures with captions}
 
