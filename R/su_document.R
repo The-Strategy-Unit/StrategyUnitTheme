@@ -7,6 +7,8 @@
 #' documentation} for additional details on using the \code{word_document}
 #' format.
 #'
+#' @param use_numbered_headings should we use numbered headings? Defaults to
+#'   false
 #' @inheritParams rmarkdown::pdf_document
 #' @inheritParams rmarkdown::html_document
 
@@ -23,7 +25,8 @@
 #' render("input.Rmd", su_document())
 #' }
 #' @export
-su_document <- function(toc = FALSE,
+su_document <- function(use_numbered_headings = FALSE,
+                        toc = FALSE,
                         toc_depth = 1,
                         fig_caption = TRUE,
                         df_print = "kable",
@@ -35,12 +38,15 @@ su_document <- function(toc = FALSE,
 
   # get the locations of resource files located within the package
   su_template <- system.file("rmarkdown/templates/su-document",
-    "Strategy_Unit_Template.docx",
+    ifelse(use_numbered_headings,
+      "Strategy_Unit_Template_Numbered_Headings.docx",
+      "Strategy_Unit_Template.docx"
+    ),
     package = "StrategyUnitTheme"
   )
 
   # page width: A4 = 21cm, left+right margin = 2cm each, so width is 17cm
-  fig_width  <- 6.7 # ~17 cm
+  fig_width <- 6.7 # ~17 cm
   fig_height <- 3.8 # ~16:9 aspect ratio
 
   # Set's the base ggplot theme to the Strategy Unit Theme

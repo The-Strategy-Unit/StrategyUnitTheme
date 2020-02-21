@@ -5,6 +5,7 @@
 \title{Convert to an Strategy Unit Word document}
 \usage{
 su_document(
+  use_numbered_headings = FALSE,
   toc = FALSE,
   toc_depth = 1,
   fig_caption = TRUE,
@@ -17,6 +18,9 @@ su_document(
 )
 }
 \arguments{
+\item{use_numbered_headings}{should we use numbered headings? Defaults to
+false}
+
 \item{toc}{\code{TRUE} to include a table of contents in the output}
 
 \item{toc_depth}{Depth of headers to include in table of contents}
