@@ -30,7 +30,6 @@ su_document <- function(use_numbered_headings = FALSE,
                         toc_depth = 1,
                         fig_caption = TRUE,
                         df_print = "kable",
-                        smart = TRUE,
                         highlight = "default",
                         keep_md = FALSE,
                         md_extensions = NULL,
@@ -53,17 +52,17 @@ su_document <- function(use_numbered_headings = FALSE,
   ggplot2::theme_set(su_theme())
 
   # call the base word_document function
-  rmarkdown::word_document(toc,
-    toc_depth,
-    fig_width,
-    fig_height,
-    fig_caption,
-    df_print,
-    smart,
-    highlight,
+  rmarkdown::word_document(
+    toc = toc,
+    toc_depth = toc_depth,
+    fig_width = fig_width,
+    fig_height = fig_height,
+    fig_caption = fig_caption,
+    df_print = df_print,
+    highlight = highlight,
     reference_docx = su_template,
-    keep_md,
-    md_extensions,
-    pandoc_args
+    keep_md = keep_md,
+    md_extensions = md_extensions,
+    pandoc_args = pandoc_args
   )
 }
