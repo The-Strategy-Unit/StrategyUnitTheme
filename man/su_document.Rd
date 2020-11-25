@@ -10,7 +10,6 @@ su_document(
   toc_depth = 1,
   fig_caption = TRUE,
   df_print = "kable",
-  smart = TRUE,
   highlight = "default",
   keep_md = FALSE,
   md_extensions = NULL,
@@ -38,10 +37,6 @@ for formats that produce HTML). In addition to the named methods you can
 also pass an arbitrary function to be used for printing data frames. You
 can disable the \code{df_print} behavior entirely by setting the option
 \code{rmarkdown.df_print} to \code{FALSE}.}
-
-\item{smart}{Produce typographically correct output, converting straight
-quotes to curly quotes, \code{---} to em-dashes, \code{--} to en-dashes, and
-\code{...} to ellipses.}
 
 \item{highlight}{Syntax highlighting style. Supported styles include
 "default", "tango", "pygments", "kate", "monochrome", "espresso",
