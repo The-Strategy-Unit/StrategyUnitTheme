@@ -73,7 +73,7 @@ a named vector of RGB values in hexadecimal form." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">StrategyUnitTheme</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.6</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.7</span>
       </span>
     </div>
 
@@ -131,10 +131,10 @@ a named vector of RGB values in hexadecimal form." />
 a named vector of RGB values in hexadecimal form.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>su_theme_cols</span>(
-  <span class='no'>...</span>,
-  <span class='kw'>palette</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>NA</span>, <span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>, <span class='st'>"oj_red"</span>)
-)</pre>
+    <pre class="usage"><span class='fu'>su_theme_cols</span><span class='op'>(</span>
+  <span class='va'>...</span>,
+  palette <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>, <span class='st'>"oj_red"</span><span class='op'>)</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -163,7 +163,8 @@ those colours will be returned.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># show all of the colours</span>
-<span class='fu'>su_theme_cols</span>()</div><div class='output co'>#&gt;         orange       charcoal          slate           blue            red 
+<span class='fu'>su_theme_cols</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;         orange       charcoal          slate           blue            red 
 #&gt;      "#f8bf07"      "#2c2825"      "#686f73"      "#581dc1"      "#ec6555" 
 #&gt;         yellow           grey          white   light_orange    dark_orange 
 #&gt;      "#fce59b"      "#a3a8ac"      "#ffffff"      "#fdf2cd"      "#7c5f03" 
@@ -173,9 +174,11 @@ those colours will be returned.</p>
 #&gt;      "#263d66"      "#fbe0dc"      "#901d10"      "#fef9eb"      "#c59805" 
 #&gt;     light_grey      dark_grey    light_white     dark_white 
 #&gt;      "#ecedee"      "#4f5458"      "#f2f2f2"      "#7f7f7f" </div><div class='input'><span class='co'># or, just show some colours</span>
-<span class='fu'>su_theme_cols</span>(<span class='st'>"orange"</span>, <span class='st'>"red"</span>, <span class='st'>"grey"</span>)</div><div class='output co'>#&gt;    orange       red      grey 
+<span class='fu'>su_theme_cols</span><span class='op'>(</span><span class='st'>"orange"</span>, <span class='st'>"red"</span>, <span class='st'>"grey"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;    orange       red      grey 
 #&gt; "#f8bf07" "#ec6555" "#a3a8ac" </div><div class='input'><span class='co'># or, select a single palette</span>
-<span class='fu'>su_theme_cols</span>(<span class='kw'>palette</span> <span class='kw'>=</span> <span class='st'>"slates"</span>)</div><div class='output co'>#&gt; light_slate       slate  dark_slate 
+<span class='fu'>su_theme_cols</span><span class='op'>(</span>palette <span class='op'>=</span> <span class='st'>"slates"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; light_slate       slate  dark_slate 
 #&gt;   "#e0e2e3"   "#686f73"   "#333739" </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -192,7 +195,7 @@ those colours will be returned.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
