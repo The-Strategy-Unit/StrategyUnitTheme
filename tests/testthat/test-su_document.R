@@ -20,7 +20,6 @@ test_that("calls rmarkdown::word_document", {
     fig_height = 3.8,
     fig_caption = TRUE,
     df_print = "kable",
-    smart = TRUE,
     highlight = "default",
     reference_docx = "su_template.docx",
     keep_md = FALSE,
