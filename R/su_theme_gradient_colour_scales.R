@@ -22,10 +22,10 @@ NULL
 scale_colour_su <- function(palette = c(
                               "main",
                               "oranges",
+                              "charcoals",
                               "slates",
-                              "mixed",
-                              "oj_coal",
-                              "oj_red"
+                              "reds",
+                              "blues"
                             ),
                             discrete = TRUE,
                             reverse = FALSE, ...) {
@@ -49,10 +49,10 @@ scale_color_su <- scale_colour_su
 scale_fill_su <- function(palette = c(
                             "main",
                             "oranges",
+                            "charcoals",
                             "slates",
-                            "mixed",
-                            "oj_coal",
-                            "oj_red"
+                            "reds",
+                            "blues"
                           ),
                           discrete = TRUE,
                           reverse = FALSE, ...) {

@@ -3,30 +3,23 @@ library(testthat)
 context("su_theme_cols")
 
 su_theme_colours <- c(
-  orange = "#f8bf07",
+  orange = "#f9bf07",
   charcoal = "#2c2825",
   slate = "#686f73",
-  blue = "#581dc1",
+  blue = "#5881c1",
   red = "#ec6555",
-  yellow = "#fce59b",
-  grey = "#a3a8ac",
-  white = "#ffffff",
-  light_orange = "#fdf2cd",
+
+  light_orange = "#fcdf83",
+  light_charcoal = "#9d928a",
+  light_slate = "#b2b7b9",
+  light_blue = "#abc0e0",
+  light_red = "#f5b2aa",
+
   dark_orange = "#7c5f03",
-  light_charcoal = "#ebe9e7",
-  dark_charcoal = "#000000",
-  light_slate = "#e0e2e3",
-  dark_slate = "#333739",
-  light_blue = "#dde5f2",
-  dark_blue = "#263d66",
-  light_red = "#fbe0dc",
-  dark_red = "#901d10",
-  light_yellow = "#fef9eb",
-  dark_yellow = "#c59805",
-  light_grey = "#ecedee",
-  dark_grey = "#4f5458",
-  light_white = "#f2f2f2",
-  dark_white = "#7f7f7f"
+  dark_charcoal = "#151412",
+  dark_slate = "#343739",
+  dark_blue = "#263f66",
+  dark_red = "#901d10"
 )
 
 test_that("when no arguments all of the colours are returned", {
@@ -46,7 +39,7 @@ test_that("when arguments are passed to ... only those colours are returned", {
   fn("orange")
   fn("orange", "light_orange")
   fn("red", "light_slate", "dark_white")
-  fn("red", "orange", "light_white", "dark_slate")
+  fn("red", "orange", "dark_slate")
 })
 
 test_that("when a palette is passed, only the palettes colours are returned", {
@@ -58,10 +51,10 @@ test_that("when a palette is passed, only the palettes colours are returned", {
 
   fn("main", c("orange", "charcoal", "slate", "blue", "red"))
   fn("oranges", c("light_orange", "orange", "dark_orange"))
+  fn("charcoals", c("light_charcoal", "charcoal", "dark_charcoal"))
   fn("slates", c("light_slate", "slate", "dark_slate"))
-  fn("mixed", c("dark_red", "orange", "yellow", "light_blue", "slate"))
-  fn("oj_coal", c("yellow", "orange", "red", "dark_red", "dark_charcoal"))
-  fn("oj_red", c("yellow", "orange", "red", "dark_red"))
+  fn("reds", c("light_red", "red", "dark_red"))
+  fn("blues", c("light_blue", "blue", "dark_blue"))
 })
 
 test_that("an error occurs when an invalid palette is passed", {

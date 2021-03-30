@@ -6,7 +6,7 @@
 \usage{
 su_theme_cols(
   ...,
-  palette = c(NA, "main", "oranges", "slates", "mixed", "oj_coal", "oj_red")
+  palette = c(NA, "main", "oranges", "charcoals", "slates", "reds", "blues")
 )
 }
 \arguments{

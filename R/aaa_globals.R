@@ -6,30 +6,23 @@
 # The colours that are used in the Strategy Unit Theme. Non-exported (used by
 # other functions e.g. su_theme_cols)
 su_theme_colours <- c(
-  orange = "#f8bf07",
+  orange = "#f9bf07",
   charcoal = "#2c2825",
   slate = "#686f73",
-  blue = "#581dc1",
+  blue = "#5881c1",
   red = "#ec6555",
-  yellow = "#fce59b",
-  grey = "#a3a8ac",
-  white = "#ffffff",
-  light_orange = "#fdf2cd",
+
+  light_orange = "#fcdf83",
+  light_charcoal = "#9d928a",
+  light_slate = "#b2b7b9",
+  light_blue = "#abc0e0",
+  light_red = "#f5b2aa",
+
   dark_orange = "#7c5f03",
-  light_charcoal = "#ebe9e7",
-  dark_charcoal = "#000000",
-  light_slate = "#e0e2e3",
-  dark_slate = "#333739",
-  light_blue = "#dde5f2",
-  dark_blue = "#263d66",
-  light_red = "#fbe0dc",
-  dark_red = "#901d10",
-  light_yellow = "#fef9eb",
-  dark_yellow = "#c59805",
-  light_grey = "#ecedee",
-  dark_grey = "#4f5458",
-  light_white = "#f2f2f2",
-  dark_white = "#7f7f7f"
+  dark_charcoal = "#151412",
+  dark_slate = "#343739",
+  dark_blue = "#263f66",
+  dark_red = "#901d10"
 )
 
 # Strategy Unit Theme Palettes Vector
@@ -39,8 +32,8 @@ su_theme_colours <- c(
 su_theme_palettes <- c(
   "main",
   "oranges",
+  "charcoals",
   "slates",
-  "mixed",
-  "oj_coal",
-  "oj_red"
+  "reds",
+  "blues"
 )

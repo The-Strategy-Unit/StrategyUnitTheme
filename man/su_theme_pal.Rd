@@ -5,7 +5,7 @@
 \title{Strategy Unit Theme Palettes}
 \usage{
 su_theme_pal(
-  palette = c("main", "oranges", "slates", "mixed", "oj_coal", "oj_red"),
+  palette = c("main", "oranges", "charcoals", "slates", "reds", "blues"),
   reverse = FALSE,
   ...
 )

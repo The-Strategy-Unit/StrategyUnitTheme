@@ -19,10 +19,10 @@
 su_theme_pal <- function(palette = c(
                            "main",
                            "oranges",
+                           "charcoals",
                            "slates",
-                           "mixed",
-                           "oj_coal",
-                           "oj_red"
+                           "reds",
+                           "blues"
                          ),
                          reverse = FALSE,
                          ...) {

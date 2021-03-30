@@ -42,7 +42,7 @@ If you are only interested in specific colours, you can specify them as
 arguments to the function, like so:
 
 ```{r show specific colours}
-su_theme_cols("orange", "red", "grey")
+su_theme_cols("orange", "red", "slate")
 ```
 
 Or, you can use one of the available palettes:
@@ -91,7 +91,7 @@ You can also change specify a different palette, and reverse the order like so:
 ```{r specifying a reversed palette}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, colour = Species)) +
   geom_point() +
-  scale_colour_su(palette = "oj_coal", reverse = TRUE)
+  scale_colour_su(palette = "reds", reverse = TRUE)
 ```
 
 These functions by default are for discrete data. If you have continuous then
