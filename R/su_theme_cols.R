@@ -59,7 +59,7 @@ su_theme_cols <- function(...,
 
   # return the colours that are part of this palette
   colours <- switch(palette,
-    "main" = c("orange", "charcoal", "slate", "blue", "red"),
+    "main" = c("orange", "red", "blue"),
     "oranges" = c("light_orange", "orange", "dark_orange"),
     "charcoals" = c("light_charcoal", "charcoal", "dark_charcoal"),
     "slates" = c("light_slate", "slate", "dark_slate"),

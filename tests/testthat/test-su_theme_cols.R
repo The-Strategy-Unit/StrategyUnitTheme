@@ -49,7 +49,7 @@ test_that("when a palette is passed, only the palettes colours are returned", {
     expect_equal(actual, expected)
   }
 
-  fn("main", c("orange", "charcoal", "slate", "blue", "red"))
+  fn("main", c("orange", "red", "blue"))
   fn("oranges", c("light_orange", "orange", "dark_orange"))
   fn("charcoals", c("light_charcoal", "charcoal", "dark_charcoal"))
   fn("slates", c("light_slate", "slate", "dark_slate"))

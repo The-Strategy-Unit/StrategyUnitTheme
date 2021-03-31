@@ -7,11 +7,11 @@ test_that("it returns a function", {
 })
 
 test_that("it returns expected colours", {
-  expected <- c("#F9BF07", "#403F3F", "#5D7AA6", "#EC6555")
+  expected <- c("#F9BF07", "#F0833A", "#BA6E79", "#5881C1")
   actual <- su_theme_pal()(4)
   expect_equal(actual, expected)
 
-  expected <- c("#F9BF07", "#2C2825", "#686F73", "#5881C1", "#EC6555")
+  expected <- c("#F9BF07", "#F2922D", "#EC6555", "#A2728B", "#5881C1")
   actual <- su_theme_pal()(5)
   expect_equal(actual, expected)
 })
