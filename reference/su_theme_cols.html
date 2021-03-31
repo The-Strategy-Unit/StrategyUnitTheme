@@ -81,7 +81,7 @@ a named vector of RGB values in hexadecimal form." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -104,7 +104,7 @@ a named vector of RGB values in hexadecimal form." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/The-Strategy-Unit/StrategyUnitTheme">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -133,7 +133,7 @@ a named vector of RGB values in hexadecimal form.</p>
 
     <pre class="usage"><span class='fu'>su_theme_cols</span><span class='op'>(</span>
   <span class='va'>...</span>,
-  palette <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"slates"</span>, <span class='st'>"mixed"</span>, <span class='st'>"oj_coal"</span>, <span class='st'>"oj_red"</span><span class='op'>)</span>
+  palette <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='st'>"main"</span>, <span class='st'>"oranges"</span>, <span class='st'>"charcoals"</span>, <span class='st'>"slates"</span>, <span class='st'>"reds"</span>, <span class='st'>"blues"</span><span class='op'>)</span>
 <span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
@@ -165,21 +165,17 @@ those colours will be returned.</p>
     <pre class="examples"><div class='input'><span class='co'># show all of the colours</span>
 <span class='fu'>su_theme_cols</span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;         orange       charcoal          slate           blue            red 
-#&gt;      "#f8bf07"      "#2c2825"      "#686f73"      "#581dc1"      "#ec6555" 
-#&gt;         yellow           grey          white   light_orange    dark_orange 
-#&gt;      "#fce59b"      "#a3a8ac"      "#ffffff"      "#fdf2cd"      "#7c5f03" 
-#&gt; light_charcoal  dark_charcoal    light_slate     dark_slate     light_blue 
-#&gt;      "#ebe9e7"      "#000000"      "#e0e2e3"      "#333739"      "#dde5f2" 
-#&gt;      dark_blue      light_red       dark_red   light_yellow    dark_yellow 
-#&gt;      "#263d66"      "#fbe0dc"      "#901d10"      "#fef9eb"      "#c59805" 
-#&gt;     light_grey      dark_grey    light_white     dark_white 
-#&gt;      "#ecedee"      "#4f5458"      "#f2f2f2"      "#7f7f7f" </div><div class='input'><span class='co'># or, just show some colours</span>
+#&gt;      "#f9bf07"      "#2c2825"      "#686f73"      "#5881c1"      "#ec6555" 
+#&gt;   light_orange light_charcoal    light_slate     light_blue      light_red 
+#&gt;      "#fcdf83"      "#9d928a"      "#b2b7b9"      "#abc0e0"      "#f5b2aa" 
+#&gt;    dark_orange  dark_charcoal     dark_slate      dark_blue       dark_red 
+#&gt;      "#7c5f03"      "#151412"      "#343739"      "#263f66"      "#901d10" </div><div class='input'><span class='co'># or, just show some colours</span>
 <span class='fu'>su_theme_cols</span><span class='op'>(</span><span class='st'>"orange"</span>, <span class='st'>"red"</span>, <span class='st'>"grey"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt;    orange       red      grey 
-#&gt; "#f8bf07" "#ec6555" "#a3a8ac" </div><div class='input'><span class='co'># or, select a single palette</span>
+</div><div class='output co'>#&gt;    orange       red      &lt;NA&gt; 
+#&gt; "#f9bf07" "#ec6555"        NA </div><div class='input'><span class='co'># or, select a single palette</span>
 <span class='fu'>su_theme_cols</span><span class='op'>(</span>palette <span class='op'>=</span> <span class='st'>"slates"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; light_slate       slate  dark_slate 
-#&gt;   "#e0e2e3"   "#686f73"   "#333739" </div></pre>
+#&gt;   "#b2b7b9"   "#686f73"   "#343739" </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

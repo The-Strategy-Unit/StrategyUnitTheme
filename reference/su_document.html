@@ -81,7 +81,7 @@ document." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -104,7 +104,7 @@ document." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/The-Strategy-Unit/StrategyUnitTheme">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fas fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -175,7 +175,9 @@ method creates a paginated HTML table (note that this method is only valid
 for formats that produce HTML). In addition to the named methods you can
 also pass an arbitrary function to be used for printing data frames. You
 can disable the <code>df_print</code> behavior entirely by setting the option
-<code>rmarkdown.df_print</code> to <code>FALSE</code>.</p></td>
+<code>rmarkdown.df_print</code> to <code>FALSE</code>. See
+<a href='https://bookdown.org/yihui/rmarkdown/html-document.html#data-frame-printing'>Data
+frame printing section</a> in bookdown book for examples.</p></td>
     </tr>
     <tr>
       <th>highlight</th>
@@ -190,7 +192,7 @@ can disable the <code>df_print</code> behavior entirely by setting the option
     <tr>
       <th>md_extensions</th>
       <td><p>Markdown extensions to be added or removed from the
-default definition or R Markdown. See the <code><a href='https://rdrr.io/pkg/rmarkdown/man/rmarkdown_format.html'>rmarkdown_format</a></code> for
+default definition or R Markdown. See the <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/rmarkdown_format.html'>rmarkdown_format</a></code> for
 additional details.</p></td>
     </tr>
     <tr>
@@ -201,7 +203,7 @@ additional details.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>R Markdown output format to pass to <code><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>render</a></code></p>
+    <p>R Markdown output format to pass to <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/render.html'>render</a></code></p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>See the <a href='https://rmarkdown.rstudio.com/word_document_format.html'>online
@@ -213,7 +215,7 @@ format.</p>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://github.com/rstudio/rmarkdown'>rmarkdown</a></span><span class='op'>)</span>
 
 <span class='co'># simple invocation</span>
-<span class='fu'><a href='https://rdrr.io/pkg/rmarkdown/man/render.html'>render</a></span><span class='op'>(</span><span class='st'>"input.Rmd"</span>, <span class='fu'>su_document</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://pkgs.rstudio.com/rmarkdown/reference/render.html'>render</a></span><span class='op'>(</span><span class='st'>"input.Rmd"</span>, <span class='fu'>su_document</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
 <span class='op'>}</span>
 </div></pre>
   </div>
