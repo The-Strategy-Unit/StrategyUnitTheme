@@ -1,0 +1,65 @@
+---
+editor: visual
+execute:
+  echo: false
+  message: false
+  warning: false
+title: "What you want to call your report here"
+lang: en-GB
+author: Yourname Here
+date: last-modified
+date-format: "YYYY-MM-DD"
+title-block-banner: "#f9bf07"
+title-block-banner-color: "#333739"
+format:
+  html:
+    embed-resources: true
+    smooth-scroll: true
+    theme: cosmo
+    fontcolor: black
+    toc: true
+    toc-location: left
+    toc-title: Summary
+    toc-depth: 3
+css: styles.css
+---
+
+```{r}
+#| label: loading packages
+#| include: false
+
+my_packages <- c("tidyverse", "palmerpenguins", "quarto", "readxl", "ggplot2", "sf","forcats","scales", "janitor","ggnewscale","waterfalls","DT") # list of required packages
+
+not_installed <- my_packages[!(my_packages %in% installed.packages()[ , "Package"])]    # Extract not installed packages
+if(length(not_installed)) install.packages(not_installed)
+
+lapply(my_packages, require, character.only = TRUE)    # Load packages
+
+options(scipen=999)
+```
+
+```{r}
+#| label: function for displaying tables
+#| include: false
+
+create_dt <- function(x) {
+    DT::datatable(
+        x
+        , extensions = "Buttons"
+        , rownames = FALSE
+        , options = list(
+            dom = "Blfrtip"
+            , lengthChange = FALSE
+            , autoWidth = TRUE
+            , searching = FALSE
+            , paging = FALSE
+            , bInfo = FALSE
+            , class = 'cell-border stripe'
+            , buttons = c("copy")
+            , lengthMenu = list(
+                c(10, 25, 50, -1)
+                , c(10, 25, 50, "All"))))
+}
+
+# To generate table into output now simply type create_dt(yourtablename)
+```
