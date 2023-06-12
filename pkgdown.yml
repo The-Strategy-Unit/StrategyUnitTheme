@@ -1,9 +1,9 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1
+pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   Colours: Colours.html
-last_built: 2021-03-31T12:07Z
+last_built: 2023-06-12T08:42Z
 urls:
   reference: https://The-Strategy-Unit.github.io/StrategyUnitTheme/reference
   article: https://The-Strategy-Unit.github.io/StrategyUnitTheme/articles

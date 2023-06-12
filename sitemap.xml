@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/404.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/CONTRIBUTING.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/articles/Colours.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/authors.html</loc>
+  </url>
+  <url>
     <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/index.html</loc>
+  </url>
+  <url>
+    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/reference/index.html</loc>
   </url>
   <url>
     <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/reference/su_document.html</loc>
@@ -20,8 +41,5 @@
   </url>
   <url>
     <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/reference/su_theme_pal.html</loc>
-  </url>
-  <url>
-    <loc>https://The-Strategy-Unit.github.io/StrategyUnitTheme/articles/Colours.html</loc>
   </url>
 </urlset>

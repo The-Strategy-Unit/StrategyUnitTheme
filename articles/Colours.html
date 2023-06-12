@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,16 +40,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -61,8 +57,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/The-Strategy-Unit/StrategyUnitTheme">
-    <span class="fas fa-github fa-lg"></span>
+  <a href="https://github.com/The-Strategy-Unit/StrategyUnitTheme" class="external-link">
+    <span class="fa fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -89,54 +85,54 @@
 
     
     
-<p>The <code>StrategyUnitTheme</code> package contains funcions that return the colours used in the <a href="https://www.strategyunitwm.nhs.uk/">Strategy Unit’s</a> branding. This Vignette will explain how to use these functions to set the colours in plots created with <a href="https://cran.r-project.org/web/packages/ggplot2/index.html">ggplot2</a>.</p>
-<div id="list-available-colours" class="section level2">
-<h2 class="hasAnchor">
-<a href="#list-available-colours" class="anchor"></a>List available colours</h2>
+<p>The <code>StrategyUnitTheme</code> package contains funcions that return the colours used in the <a href="https://www.strategyunitwm.nhs.uk/" class="external-link">Strategy Unit’s</a> branding. This Vignette will explain how to use these functions to set the colours in plots created with <a href="https://cran.r-project.org/web/packages/ggplot2/index.html" class="external-link">ggplot2</a>.</p>
+<div class="section level2">
+<h2 id="list-available-colours">List available colours<a class="anchor" aria-label="anchor" href="#list-available-colours"></a>
+</h2>
 <p>To view all of the possible colours available, you can use the following function:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span><span class="op">)</span>
-<span class="co">#&gt;         orange       charcoal          slate           blue            red </span>
-<span class="co">#&gt;      "#f9bf07"      "#2c2825"      "#686f73"      "#5881c1"      "#ec6555" </span>
-<span class="co">#&gt;   light_orange light_charcoal    light_slate     light_blue      light_red </span>
-<span class="co">#&gt;      "#fcdf83"      "#9d928a"      "#b2b7b9"      "#abc0e0"      "#f5b2aa" </span>
-<span class="co">#&gt;    dark_orange  dark_charcoal     dark_slate      dark_blue       dark_red </span>
-<span class="co">#&gt;      "#7c5f03"      "#151412"      "#343739"      "#263f66"      "#901d10"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co">#&gt;         orange       charcoal          slate           blue            red </span></span>
+<span><span class="co">#&gt;      "#f9bf07"      "#2c2825"      "#686f73"      "#5881c1"      "#ec6555" </span></span>
+<span><span class="co">#&gt;   light_orange light_charcoal    light_slate     light_blue      light_red </span></span>
+<span><span class="co">#&gt;      "#fcdf83"      "#9d928a"      "#b2b7b9"      "#abc0e0"      "#f5b2aa" </span></span>
+<span><span class="co">#&gt;    dark_orange  dark_charcoal     dark_slate      dark_blue       dark_red </span></span>
+<span><span class="co">#&gt;      "#7c5f03"      "#151412"      "#343739"      "#263f66"      "#901d10"</span></span></code></pre></div>
 <p>The <code>su_theme_cols</code> function returns a named vectored of hex-encoded RGB values of colours.</p>
 <p>If you are only interested in specific colours, you can specify them as arguments to the function, like so:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"red"</span>, <span class="st">"slate"</span><span class="op">)</span>
-<span class="co">#&gt;    orange       red     slate </span>
-<span class="co">#&gt; "#f9bf07" "#ec6555" "#686f73"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span><span class="st">"orange"</span>, <span class="st">"red"</span>, <span class="st">"slate"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    orange       red     slate </span></span>
+<span><span class="co">#&gt; "#f9bf07" "#ec6555" "#686f73"</span></span></code></pre></div>
 <p>Or, you can use one of the available palettes:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span>
-<span class="co">#&gt;    orange       red      blue </span>
-<span class="co">#&gt; "#f9bf07" "#ec6555" "#5881c1"</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/su_theme_cols.html">su_theme_cols</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"main"</span><span class="op">)</span></span>
+<span><span class="co">#&gt;    orange       red      blue </span></span>
+<span><span class="co">#&gt; "#f9bf07" "#ec6555" "#5881c1"</span></span></code></pre></div>
 <p>The documentation for <code>su_theme_cols</code> lists all of the palettes that are available to use.</p>
 <p>These colours are shown below.</p>
 <p><img src="Colours_files/figure-html/show%20the%20colours-1.png" width="768"></p>
 </div>
-<div id="using-the-theme-with-ggplot2" class="section level2">
-<h2 class="hasAnchor">
-<a href="#using-the-theme-with-ggplot2" class="anchor"></a>Using the theme with ggplot2</h2>
+<div class="section level2">
+<h2 id="using-the-theme-with-ggplot2">Using the theme with ggplot2<a class="anchor" aria-label="anchor" href="#using-the-theme-with-ggplot2"></a>
+</h2>
 <p>If you want to use the Strategy Unit’s colours in your plots, you can use the <code>scale_colour_su</code> and <code>scale_fill_su</code> functions. For example, if you wish to use the main palette:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Sepal.Width</span>, colour <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_colour_su</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Sepal.Width</span>, colour <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_colour_su</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Colours_files/figure-html/using%20the%20main%20colour%20palette%20in%20a%20plot-1.png" width="768"></p>
 <p>You can also change specify a different palette, and reverse the order like so:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Sepal.Width</span>, colour <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_colour_su</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"reds"</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Sepal.Width</span>, colour <span class="op">=</span> <span class="va">Species</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html" class="external-link">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_colour_su</a></span><span class="op">(</span>palette <span class="op">=</span> <span class="st">"reds"</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Colours_files/figure-html/specifying%20a%20reversed%20palette-1.png" width="768"></p>
 <p>These functions by default are for discrete data. If you have continuous then you need to set the <code>discrete</code> argument to <code>FALSE</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html">geom_tile</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
-  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_fill_su</a></span><span class="op">(</span>discrete <span class="op">=</span> <span class="cn">FALSE</span>, palette <span class="op">=</span> <span class="st">"oranges"</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">faithfuld</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span><span class="va">waiting</span>, <span class="va">eruptions</span>, fill <span class="op">=</span> <span class="va">density</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_tile.html" class="external-link">geom_tile</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="../reference/su_theme_gradient_colour_scales.html">scale_fill_su</a></span><span class="op">(</span>discrete <span class="op">=</span> <span class="cn">FALSE</span>, palette <span class="op">=</span> <span class="st">"oranges"</span>, reverse <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="Colours_files/figure-html/continous%20fill-1.png" width="768"></p>
 </div>
   </div>
@@ -152,11 +148,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://github.com/tomjemmett">Tom Jemmett</a>, Stacey Croft.</p>
+  <p></p>
+<p>Developed by <a href="https://github.com/tomjemmett" class="external-link">Tom Jemmett</a>, Stacey Croft.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
 </div>
 
       </footer>
@@ -164,6 +162,8 @@
 
   
 
+
+  
 
   </body>
 </html>
